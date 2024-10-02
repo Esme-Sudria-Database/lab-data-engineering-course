@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "cli-esme"
+version = "0.1.0"
+description = "cli-esme for data eng course"
+authors = ["Maxence & Luc"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.7"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.11.2"
+ruff = "^0.6.7"
+
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
