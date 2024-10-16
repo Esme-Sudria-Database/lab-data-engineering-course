@@ -1,1 +1,6 @@
 .idea
+*.DS_Store
+answers_tp1.md
+TP1_SUJET.md
+front/
+data/

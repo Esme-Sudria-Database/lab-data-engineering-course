@@ -1,5 +1,5 @@
 .PHONY: help
-help: ## Display this help message
+help: ## Show this help message
 	@echo "Usage: make [target]"
 	@echo ""
 	@echo "Available targets:"
@@ -13,7 +13,7 @@ help: ## Display this help message
 	@echo "  help          Show this help message"
 
 
-##@ Docker
+##@ Docker commands
 .PHONY: start
 start: 
 	docker compose up
@@ -23,7 +23,13 @@ stop: ## Stop the docker containers
 	docker compose down
 
 
-##@ Print
+##@ Utility commands
 .PHONY: print
-print: ## Print a message
+print: ## Print a hello message
 	@echo "hello from Makefile"
+
+
+##@ Development commands
+.PHONY: generate-data
+generate-data: ## Generate data
+	python3 data/generator/generate_products.py
