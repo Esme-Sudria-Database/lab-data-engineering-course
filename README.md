@@ -7,6 +7,13 @@ This lab contains all the necessary resources for the practical parts of the cou
 
 It will be regularly updated.
 
+You'll need docker desktop for this lab.
+
+## Preamble for windows developers
+
+1. Install scoop https://github.com/ScoopInstaller/Install#readme -- section *Typical Installation*
+2. Install make `scoop install main/make`
+
 ### To do only once
 
 Clone the repo on your machine `git clone https://github.com/esme-devops/lab-data-engineering-course.git`
@@ -15,7 +22,7 @@ Navigate to the project folder: `cd lab-data-engineering-course`
 
 ### At each startup
 
-Start the database `make start`  
+Start the docker compose stack `make start`  
 
 ### pgadmin configuration to use with postgres
 
