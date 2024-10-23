@@ -1,6 +1,7 @@
 .idea
 *.DS_Store
-answers_tp1.md
+answers_*.md
 TP1_SUJET.md
 front/
+backend/
 data/

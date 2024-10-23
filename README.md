@@ -14,15 +14,23 @@ You'll need docker desktop for this lab.
 1. Install scoop https://github.com/ScoopInstaller/Install#readme -- section *Typical Installation*
 2. Install make `scoop install main/make`
 
+OR USE WSL 2
+
 ### To do only once
 
 Clone the repo on your machine `git clone https://github.com/esme-devops/lab-data-engineering-course.git`
 
 Navigate to the project folder: `cd lab-data-engineering-course`
 
+# Lab 1
+
+The goal of this is to manipulate SQL and to refresh previous year knowledges. 
+
+You will use pgAdmin to design the queries.
+
 ### At each startup
 
-Start the docker compose stack `make start`  
+Start the docker compose stack with postgres using `make start-postgres`  
 
 ### pgadmin configuration to use with postgres
 
@@ -43,14 +51,8 @@ Here are the parameters to use :
 You can use the query tool 
 --> right click on the database / query tool
 
-### Lab 1 
-The goal of this is to manipulate SQL and to refresh previous year knowledges. 
 
-First, you will use pgAdmin to design the queries.
-
-When you finished, you will implement the queries in the API.
-
-#### Queries to design
+### Queries to design
 
 1. List all the suppliers with their details
 2. List all the products with their prices and stock quantities
@@ -73,5 +75,27 @@ When you finished, you will implement the queries in the API.
 19. Find the customers who have made the most orders
 20. Find the suppliers who have supplied the most products
 
-#### API
-When you arrive this section, please reach me out :) 
+# Lab 2
+
+## Goals
+
+Discover Mongo environment and manipulate data inside it.
+
+## To do each time
+
+Start the docker compose stack with mongo using `make start-mongo`  
+
+Go to `localhost:3000` to use the nosqlclient interface.
+
+### Queries to design
+
+1. Find all products with a price greater than $500.
+2. Find all products from a specific brand (e.g., "TechPro").
+3. Count the total number of products in the collection.
+4. Find all products that have a rating of exactly 5.0.
+5. Find all products that have received more than 100 reviews.
+6. Find the top 5 most expensive products.
+7. Find all products with an average rating greater than 4.0 and a price less than $300.
+8. Find the average price of all products for each brand.
+9. Find products that have at least 2 images and have been updated in the last 60 days.
+10. Calculate the average rating and total number of reviews for products in a specific category (e.g., "Electronics").

@@ -1,0 +1,19 @@
+services:
+  esme_mongodb:
+    build:
+      context: ./esme_mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - /data/db
+      - ./esme_mongodb/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+  esme_mongo_console:
+    build:
+      context: ./esme_mongo_nosqlclient
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGOCLIENT_DEFAULT_CONNECTION_URL=mongodb://esme_mongodb:27017/geography
+    volumes:
+      - /data/db
