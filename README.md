@@ -99,3 +99,8 @@ Go to `localhost:3000` to use the nosqlclient interface.
 8. Find the average price of all products for each brand.
 9. Find products that have at least 2 images and have been updated in the last 60 days.
 10. Calculate the average rating and total number of reviews for products in a specific category (e.g., "Electronics").
+
+Tip: don't forget the use this query to get the structure of a product:
+```js
+db.products.findOne()
+```
