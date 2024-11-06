@@ -48,3 +48,7 @@ generate-data-pg: ## Generate data
 .PHONY: generate-data-mongo
 generate-data-mongo: ## Generate data
 	python3 data/mongo-generator/generate_products_mongo.py
+
+.PHONY: generate-data-tp2
+generate-data-tp2: ## Generate data
+	python3 data/tp2_generator/prescription_generator.py

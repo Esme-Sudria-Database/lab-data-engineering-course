@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e -x
 
-databases=("ecommerce")
+databases=("ecommerce" "hospital")
 
 for database in "${databases[@]}"; do
   psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL

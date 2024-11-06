@@ -7,3 +7,11 @@ mongoimport \
   --type json \
   --jsonArray \
   --file /docker-entrypoint-initdb.d/products.json;
+
+mongoimport \
+  --host localhost \
+  --db hospital \
+  --collection prescriptions \
+  --type json \
+  --jsonArray \
+  --file /docker-entrypoint-initdb.d/prescriptions.json;
