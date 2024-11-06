@@ -19,11 +19,11 @@ help: ## Show this help message
 ##@ Docker commands
 .PHONY: start-postgres
 start-postgres: ## Start the postgres container	
-	docker compose -f docker-compose.postgres.yml up
+	docker compose -f docker-compose.postgres.yml up -d
 
 .PHONY: start-mongo
 start-mongo: ## Start the mongo container	
-	docker compose -f docker-compose.mongo.yml up
+	docker compose -f docker-compose.mongo.yml up -d
 
 .PHONY: stop-postgres
 stop-postgres: ## Stop the postgres container
